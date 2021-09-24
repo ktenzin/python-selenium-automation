@@ -3,11 +3,11 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 # init driver
-driver = webdriver.Chrome()
+driver = webdriver.Chrome(executable_path='/Users/keisharoberts/Documents/GitHub, Automation/python-selenium-automation/chromedriver')
 driver.maximize_window()
 
 # open the url
-driver.get('https://www.google.com/')
+driver.get('https://www.amazon.com/gp/help/customer/display.html')
 
 search = driver.find_element(By.NAME, 'q')
 search.clear()

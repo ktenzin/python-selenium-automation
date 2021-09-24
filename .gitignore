@@ -1,6 +1,8 @@
 # Kassandra's additions
 hw_lesson02_amazon_script.py
-
+classwork/lesson02_locators.py
+classwork/
+amazon_script.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
