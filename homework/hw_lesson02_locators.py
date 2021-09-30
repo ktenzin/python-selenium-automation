@@ -4,8 +4,7 @@ from selenium.webdriver.common.by import By # Responsible for different locator 
 driver = webdriver.Chrome()
 
 # LINK TO TEST SCRIPT
-# https://github.com/ktenzin/python-selenium-automation/tree/master/homework/hw_lesson_amazon_script.py
-
+# https://github.com/ktenzin/python-selenium-automation/blob/master/homework/hw_lesson02_amazon_script.py
 
 # ----------------------------------------------------------------------
 # 1. REPEAT EVERYTHING I CODED DURING THE CLASS.
@@ -70,25 +69,27 @@ driver.find_element(By.ID, 'ap-other-signin-issues-link')
 driver.find_element(By.ID, 'createAccountSubmit')
 
 # *Conditions of use link
-driver.find_element(By.XPATH, "//div[@class='a-section a-spacing-small a-text-center a-size-mini']//a[contains(text(), 'Conditions of Use')]")
-
-# *Conditions of use link -- Could also do by href, but it's very long and possibly dynamically generated
+driver.find_element(By.XPATH, "//div[@id='legalTextRow']/a[contains(@href, 'ap_signin_notification_condition_of_use')])
+# Be careful with text search due to language/localization
+# driver.find_element(By.XPATH, "//div[@id='legalTextRow']/a[text()='Conditions of Use']")
+# Could also do by href, but it's very long and possibly dynamically generated
 # driver.find_element(By.XPATH, "//div[@class='a-section a-spacing-small a-text-center a-size-mini']/a[@href='/gp/help/customer/display.html/ref=ap_desktop_footer_cou?ie=UTF8&nodeId=508088']")
+# driver.find_element(By.XPATH, "//div[@class='a-section a-spacing-small a-text-center a-size-mini']//a[contains(text(), 'Conditions of Use')]")
 
 # *Privacy Notice link
-driver.find_element(By.XPATH, "//div[@class='a-section a-spacing-small a-text-center a-size-mini']//a[contains(text(), 'Privacy Notice')]")
-
-# *Privacy Notice link -- Could also do by href, but it's very long and possibly dynamically generated
+driver.find_element(By.XPATH, "//div[@id='legalTextRow']/a[contains(@href, 'ap_signin_notification_privacy_notice')])
+# Be careful with text search due to language/localization
+# driver.find_element(By.XPATH, "//div[@id='legalTextRow']/a[text()='Privacy Notice']")
+# Could also do by href, but it's very long and possibly dynamically generated
 # driver.find_element(By.XPATH, "//div[@class='a-section a-spacing-small a-text-center a-size-mini']/a[@href='/gp/help/customer/display.html/ref=ap_desktop_footer_privacy_notice?ie=UTF8&nodeId=468496']")
-
-# Same problem as above...
-
 
 
 # ----------------------------------------------------------------------
 # 3. CREATE A TEST CASE FOR HELP SEARCH USING PYTHON & SELENIUM SCRIPT
 
-from time import sleep
+# Link to test case:
+# https://github.com/ktenzin/python-selenium-automation/blob/master/homework/hw_lesson02_amazon_script.py
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
