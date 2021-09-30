@@ -73,13 +73,13 @@ driver.find_element(By.ID, 'createAccountSubmit')
 driver.find_element(By.XPATH, "//div[@class='a-section a-spacing-small a-text-center a-size-mini']//a[contains(text(), 'Conditions of Use')]")
 
 # *Conditions of use link -- Could also do by href, but it's very long and possibly dynamically generated
-driver.find_element(By.XPATH, "//div[@class='a-section a-spacing-small a-text-center a-size-mini']/a[@href='/gp/help/customer/display.html/ref=ap_desktop_footer_cou?ie=UTF8&nodeId=508088']")
+# driver.find_element(By.XPATH, "//div[@class='a-section a-spacing-small a-text-center a-size-mini']/a[@href='/gp/help/customer/display.html/ref=ap_desktop_footer_cou?ie=UTF8&nodeId=508088']")
 
 # *Privacy Notice link
 driver.find_element(By.XPATH, "//div[@class='a-section a-spacing-small a-text-center a-size-mini']//a[contains(text(), 'Privacy Notice')]")
 
 # *Privacy Notice link -- Could also do by href, but it's very long and possibly dynamically generated
-driver.find_element(By.XPATH, "//div[@class='a-section a-spacing-small a-text-center a-size-mini']/a[@href='/gp/help/customer/display.html/ref=ap_desktop_footer_privacy_notice?ie=UTF8&nodeId=468496']")
+# driver.find_element(By.XPATH, "//div[@class='a-section a-spacing-small a-text-center a-size-mini']/a[@href='/gp/help/customer/display.html/ref=ap_desktop_footer_privacy_notice?ie=UTF8&nodeId=468496']")
 
 # Same problem as above...
 
