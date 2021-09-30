@@ -43,7 +43,6 @@ driver.find_element(By.XPATH, "//div[@id='nav-xshop-container']//a[contains(text
 # Use this instead of deprecated By Link Text and By Partial Link Text
 
 
-
 # ----------------------------------------------------------------------
 # 2. PRACTICE WITH LOCATORS
 
@@ -120,10 +119,3 @@ if actual_result == expected_result:
 
 # quit driver
 driver.quit()
-
-
-
-
-
-
-
