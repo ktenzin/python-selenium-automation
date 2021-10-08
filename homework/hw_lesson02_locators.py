@@ -69,6 +69,7 @@ driver.find_element(By.ID, 'createAccountSubmit')
 
 # *Conditions of use link
 driver.find_element(By.XPATH, "//div[@id='legalTextRow']/a[contains(@href, 'ap_signin_notification_condition_of_use')])
+driver.find_element(By.XPATH, "//a[contains(@href, 'ap_signin_notification_condition_of_use')])
 # Be careful with text search due to language/localization
 # driver.find_element(By.XPATH, "//div[@id='legalTextRow']/a[text()='Conditions of Use']")
 # Could also do by href, but it's very long and possibly dynamically generated
@@ -77,6 +78,7 @@ driver.find_element(By.XPATH, "//div[@id='legalTextRow']/a[contains(@href, 'ap_s
 
 # *Privacy Notice link
 driver.find_element(By.XPATH, "//div[@id='legalTextRow']/a[contains(@href, 'ap_signin_notification_privacy_notice')])
+driver.find_element(By.XPATH, "a[contains(@href, 'ap_signin_notification_privacy_notice')])
 # Be careful with text search due to language/localization
 # driver.find_element(By.XPATH, "//div[@id='legalTextRow']/a[text()='Privacy Notice']")
 # Could also do by href, but it's very long and possibly dynamically generated

@@ -4,32 +4,13 @@ from selenium.webdriver.common.by import By # Responsible for different locator 
 driver = webdriver.Chrome()
 
 # ----------------------------------------------------------------------
-# 0. REPEAT EVERYTHING I CODED DURING THE CLASS.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# ----------------------------------------------------------------------
 # 1. FIND THE MOST OPTIMAL LOCATORS FOR CREATE ACCOUNT (REGISTRATION) PAGE ELEMENTS
 
-
 # Amazon logo
-driver.find_element(By.XPATH, "//i[@class='a-icon a-icon-logo']")
+driver.find_element(By.CSS_SELECTOR, 'i.a-icon.a-icon-logo')
 
 # Create account text
-driver.find_element(By.XPATH, "//h1[@class='a-spacing-small']")
+driver.find_element(By.CSS_SELECTOR, 'h1.a-spacing-small')
 
 # Your name input field
 driver.find_element(By.ID, 'ap_customer_name')
@@ -40,35 +21,30 @@ driver.find_element(By.ID, 'ap_email')
 # Password input field
 driver.find_element(By.ID, 'ap_password')
 
-# Passwords must be at least 6 characters.
-driver.find_element("div.auth-inlined-information-message div.a-alert-content")
-# fix inside the ()
+# Passwords must be at least 6 characters text
+# driver.find_element(By.CSS_SELECTOR, "div.auth-inlined-information-message div.a-alert-content")
+driver.find_element(By.CSS_SELECTOR, ".auth-inlined-information-message .a-alert-content")
 
-# Re-enter password input field
+# Re-enter password field
 driver.find_element(By.ID, 'ap_password_check')
 
-# Create you Amazon account button
+# Create your Amazon account button
 driver.find_element(By.ID, 'continue')
 
 # Conditions of Use link
-driver.find_element(By.XPATH. "//div[@id='legalTextRow'] / a[@href='/gp/help/customer/display.html/ref=ap_register_notification_condition_of_use?ie=UTF8&nodeId=508088']")
+# *** QUESTION: Is it ok omit the beginning of the href to shorten it? If that's ok, how much can you cut? ***
+driver.find_element(By.CSS_SELECTOR, "a[href*='condition_of_use']")
+driver.find_element(By.CSS_SELECTOR, "a[href*='/ref=ap_register_notification_condition_of_use']")
+driver.find_element(By.CSS_SELECTOR, "a[href*='/gp/help/customer/display.html/ref=ap_register_notification_condition_of_use'])
 
 # Privacy Notice link
-driver.find_element(By.XPATH. "//div[@id='legalTextRow'] / a[@href='/gp/help/customer/display.html/ref=ap_register_notification_privacy_notice?ie=UTF8&nodeId=468496/ref=ap_register_notification_condition_of_use?ie=UTF8&nodeId=508088']")
+driver.find_element(By.CSS_SELECTOR, "a[href*='privacy_notice']")
+driver.find_element(By.CSS_SELECTOR, "a[href*='/ref=ap_register_notification_privacy_notice']")
+driver.find_element(By.CSS_SELECTOR, "a[href*='/r/gp/help/customer/display.html/ref=ap_register_notification_privacy_notice']")
 
 # Sign in link
-driver.find_element()
-
-
-
-
-
-
-
-
-
-
-
+driver.find_element(By.)
+driver.find_element(By.CSS_SELECTOR, "a[href*='/ap/signin']")
 
 
 # ----------------------------------------------------------------------
