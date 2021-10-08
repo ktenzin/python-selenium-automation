@@ -46,19 +46,3 @@ driver.find_element(By.CSS_SELECTOR, "a[href*='/r/gp/help/customer/display.html/
 driver.find_element(By.)
 driver.find_element(By.CSS_SELECTOR, "a[href*='/ap/signin']")
 
-
-# ----------------------------------------------------------------------
-# 2. Update a test case for support search using BDD. User can search for Cancelling an order on Amazon (test case from Ex 2 of HW2)
-
-
-
-
-
-
-
-
-
-
-# ----------------------------------------------------------------------
-# 3. CREATE A TEST CASE USING BDD THAT OPENS AMAZON.COM, CLICKS ON THE CART ICON AND VERIFIES THAT YOUR AMAZON CART IS EMPTY.
-
