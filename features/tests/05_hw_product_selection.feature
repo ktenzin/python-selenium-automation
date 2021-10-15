@@ -1,5 +1,5 @@
 # Created by keisharoberts at 10/9/21
-Feature: TEests for product page
+Feature: Tests for product page
 
   Scenario: User can select product colors
     Given Open Amazon product B08LNXZ1MG page2
