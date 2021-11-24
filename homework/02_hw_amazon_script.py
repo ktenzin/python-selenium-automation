@@ -2,7 +2,9 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
-# testing...
+# 3. Create a test case for Help search using python & selenium script
+# Test Case:
+# User can search for solutions of Cancelling an order on Amazon
 
 # init driver
 driver = webdriver.Chrome(executable_path='/Users/keisharoberts/Documents/GitHub, Automation/python-selenium-automation/chromedriver')
@@ -11,52 +13,18 @@ driver = webdriver.Chrome(executable_path='/Users/keisharoberts/Documents/GitHub
 driver.get("https://www.amazon.com/gp/help/customer/display.html")
 
 # enter search criteria
-search = driver.find_element(By.ID, 'search-help')
-search.clear()
-search.send_keys('Cancel order', Keys.ENTER)
+search_input = driver.find_element(By.ID, 'helpsearch')
+search_input.send_keys('Cancel order')
+search_input.send_keys(Keys.ENTER)
 
 # verify
-actual_result = driver.find_element(By.XPATH, "//h1[contains(text(), 'Cancel Items or Orders')]").text
+actual_result = driver.find_element(By.XPATH, "//h1").text
 expected_result = "Cancel Items or Orders"
 
-assert actual_result == expected_result, f'Error. The actual result ({actual_result}) does not match expected result ({expected_result}).'
+assert actual_result == expected_result, f'Error. Actual result {actual_result} does not match {expected_result}.'
 
-if actual_result == expected_result:
-    print('Test Passed')
+# print result
+print('Test case passed')
 
 # quit driver
 driver.quit()
-
-
-# ORIGINAL ANSWER
-# from selenium import webdriver
-# from selenium.webdriver.common.by import By
-# from selenium.webdriver.common.keys import Keys
-#
-# # testing...
-#
-# # init driver
-# driver = webdriver.Chrome(executable_path='/Users/keisharoberts/Documents/GitHub, Automation/python-selenium-automation/chromedriver')
-#
-# # open the url
-# driver.get("https://www.amazon.com/gp/help/customer/display.html")
-#
-# # enter search criteria
-# search = driver.find_element(By.XPATH, "//form[@id='search-help']//input[@name='help_keywords']")
-# search.clear()
-# search.send_keys('Cancel order')
-#
-# # press enter
-# search.send_keys(Keys.RETURN)
-#
-# # verify
-# actual_result = driver.find_element(By.XPATH, "//h1[contains(text(), 'Cancel Items or Orders')]").text
-# expected_result = "Cancel Items or Orders"
-#
-# assert actual_result == expected_result, f'Error. The actual result ({actual_result}) does not match expected result ({expected_result}).'
-#
-# if actual_result == expected_result:
-#     print('Test Passed')
-#
-# # quit driver
-# driver.quit()
