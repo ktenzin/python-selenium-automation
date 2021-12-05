@@ -6,4 +6,3 @@ Feature: Test Amazon Cart is empty
     When Click Amazon cart
     Then Verify Amazon Cart is empty
 
-
